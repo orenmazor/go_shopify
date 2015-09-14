@@ -20,7 +20,7 @@ type LineItem struct {
   
     ProductId int64 `json:"product_id"`
   
-    Properties string `json:"properties"`
+    Properties []interface{} `json:"properties"`
   
     Quantity int64 `json:"quantity"`
   
