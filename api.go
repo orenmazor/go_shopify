@@ -23,7 +23,7 @@ func (api *API) request(endpoint string, method string, params map[string]interf
 		api.client = &http.Client{}
 	}
 
-	uri := fmt.Sprintf("%s/%s", api.URI, endpoint)
+	uri := fmt.Sprintf("%s%s", api.URI, endpoint)
 	fmt.Printf(fmt.Sprintf("[%s] %s", method, uri))
 	req, err := http.NewRequest(method, uri, body)
 	if err != nil {
