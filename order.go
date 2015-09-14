@@ -66,7 +66,7 @@ type Order struct {
   
     SourceUrl string `json:"source_url"`
   
-    SubtotalPrice time.Time `json:"subtotal_price"`
+    SubtotalPrice string `json:"subtotal_price"`
   
     TaxesIncluded bool `json:"taxes_included"`
   
@@ -76,9 +76,9 @@ type Order struct {
   
     TotalDiscounts string `json:"total_discounts"`
   
-    TotalLineItemsPrice time.Time `json:"total_line_items_price"`
+    TotalLineItemsPrice string `json:"total_line_items_price"`
   
-    TotalPrice time.Time `json:"total_price"`
+    TotalPrice string `json:"total_price"`
   
     TotalPriceUsd string `json:"total_price_usd"`
   
@@ -167,7 +167,6 @@ func (api *API) Order(id int64) (*Order, error) {
   endpoint := fmt.Sprintf("/admin/orders/%d.json", id)
 
   res, status, err := api.request(endpoint, "GET", nil, nil)
-  fmt.Printf(strings(res))
 
   if err != nil {
     return nil, err
