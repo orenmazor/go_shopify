@@ -1,12 +1,6 @@
 package shopify
 
 
-import (
-  
-    "time"
-  
-)
-
 
 type LineItem struct {
   
@@ -20,7 +14,7 @@ type LineItem struct {
   
     Grams int64 `json:"grams"`
   
-    LinePrice time.Time `json:"line_price"`
+    LinePrice string `json:"line_price"`
   
     Price string `json:"price"`
   
