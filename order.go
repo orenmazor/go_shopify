@@ -167,7 +167,7 @@ func (api *API) Order(id int64) (*Order, error) {
   endpoint := fmt.Sprintf("/admin/orders/%d.json", id)
 
   res, status, err := api.request(endpoint, "GET", nil, nil)
-  fmt.Printf(res)
+  fmt.Printf(strings(res))
 
   if err != nil {
     return nil, err
