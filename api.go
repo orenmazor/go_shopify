@@ -29,8 +29,8 @@ func (api *API) request(endpoint string, method string, params map[string]interf
 		return
 	}
 
-	req.SetBasicAuth(api.Token, api.Secret)
 	req.Header.Add("Content-Type", "application/json")
+	req.Header.Add("X-Shopify-Access-Token", api.Token)
 
 	resp, err := api.client.Do(req)
 	fmt.Printf("resp %v err %v", resp, err)
