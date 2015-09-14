@@ -16,7 +16,7 @@ import (
 
 func main() {
   api = shopify.API{
-    URI: "https://shopname.myshopify.com/admin",
+    URI: "https://shopname.myshopify.com",
     Token: "(api client token)",
     Secret: "(api client secret for this shop)",
   }
